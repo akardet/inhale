@@ -1,0 +1,53 @@
+h1,
+h2 {
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+section {
+  margin-bottom: 20px;
+}
+.container {
+  width: 304px;
+  height: 425.2px;
+  background: white;
+  padding: 20px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+}
+.theme {
+  padding: 10px 0px;
+}
+.theme_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.theme_btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  box-shadow: inset -3px 4px 6px 0px hsla(0, 0%, 70%, 0.5);
+  cursor: pointer;
+}
+.theme_btn-one {
+  background-color: var(--theme-one);
+}
+.theme_btn-two {
+  background-color: var(--theme-two);
+}
+.theme_btn-three {
+  background-color: var(--theme-three);
+}
+.theme_btn-four {
+  background-color: var(--theme-four);
+}
+.theme_btn-five {
+  background-color: var(--theme-five);
+}
+.theme_btn-six {
+  background-color: var(--theme-six);
+}
