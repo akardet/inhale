@@ -22,10 +22,10 @@ dd {
 }
 
 :root {
-  --theme-one: #f4d7ac;
-  --theme-two: #faefc5;
-  --theme-three: #b8e1d2;
-  --theme-four: #a7bed3;
-  --theme-five: #aca7d4;
-  --theme-six: #939393;
+  --theme-one: hsla(36, 77%, 82%, 1);
+  --theme-two: hsla(48, 84%, 88%, 1);
+  --theme-three: hsla(158, 41%, 80%, 1);
+  --theme-four: hsla(209, 33%, 74%, 1);
+  --theme-five: hsla(247, 34%, 74%, 1);
+  --theme-six: hsla(0, 0%, 58%, 1);
 }

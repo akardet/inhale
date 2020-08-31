@@ -7,8 +7,9 @@ document.addEventListener(
 );
 
 function fetchSavedPreferences() {
+  // Fetch the root styles
   const styles = getComputedStyle(document.documentElement);
-  getFromStorage(INHALE_OBJ_KEY, ({ [INHALE_OBJ_KEY]: result }) => {
+  getFromStorage(STORED_OBJ_KEY, ({ [STORED_OBJ_KEY]: result }) => {
     setThemeColor(styles, result);
   });
 }
