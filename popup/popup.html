@@ -58,6 +58,58 @@
           ></button>
         </div>
       </section>
+      <section id="intervals" class="intervals">
+        <div class="subheader">
+          <h2 class="subtitle">Intervals</h2>
+          <label class="subheader_counter">Counts</label>
+          <input class="subheader_input" />
+        </div>
+        <div class="slide_container">
+          <label>Inhale</label>
+          <input
+            type="range"
+            min="0"
+            max="16"
+            step="1"
+            value="0"
+            class="slider"
+            id="rangeSlider-inhale"
+          />
+          <p class="slider_digit-wrapper">
+            <span id="inhale" class="slider_digit"></span> s
+          </p>
+        </div>
+        <div class="slide_container">
+          <label>Hold</label>
+          <input
+            type="range"
+            min="0"
+            max="16"
+            step="1"
+            value="0"
+            class="slider"
+            id="rangeSlider-hold"
+          />
+          <p class="slider_digit-wrapper">
+            <span id="hold" class="slider_digit"></span> s
+          </p>
+        </div>
+        <div class="slide_container">
+          <label>Exhale</label>
+          <input
+            type="range"
+            min="0"
+            max="16"
+            step="1"
+            value="0"
+            class="slider"
+            id="rangeSlider-exhale"
+          />
+          <p class="slider_digit-wrapper">
+            <span id="exhale" class="slider_digit"></span> s
+          </p>
+        </div>
+      </section>
     </div>
     <script src="./popup.js" charset="utf-8"></script>
     <script src="../utils.js" charset="utf-8"></script>

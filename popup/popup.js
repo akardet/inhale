@@ -11,8 +11,8 @@ function start() {
   themeBtnArr.map((button) => {
     button.onclick = onClick;
   });
-
   fetchSavedPreferences();
+  setupIntervalSliders();
 }
 
 function onClick(e) {
@@ -32,6 +32,31 @@ function fetchSavedPreferences() {
       (button) => button.value === result.theme
     );
     selected.classList.add("disabled");
+
+    const savedIntervals = result.intervals || {};
+    INTERVAL_KEYS.forEach((key) => {
+      const value = savedIntervals[key] || 0;
+      const valueElement = document.getElementById(`${key}`);
+      valueElement.innerHTML = value;
+
+      const sliderElement = document.getElementById(`rangeSlider-${key}`);
+      sliderElement.value = value;
+    });
+  });
+}
+
+function setupIntervalSliders() {
+  INTERVAL_KEYS.forEach((key) => {
+    const slider = document.getElementById(`rangeSlider-${key}`);
+    const value = document.getElementById(`${key}`);
+    value.innerHTML = slider.value;
+    slider.oninput = function () {
+      value.innerHTML = this.value;
+      console.log(value.id);
+      getFromStorage(STORED_OBJ_KEY, ({ [STORED_OBJ_KEY]: result }) => {
+        addToStorage({ ...result });
+      });
+    };
   });
 }
 

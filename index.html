@@ -17,29 +17,60 @@
       }
 
       .circle {
-        height: 700px;
-        width: 700px;
+        height: 800px;
+        width: 800px;
         border-radius: 50%;
         position: absolute;
       }
 
       .outer {
         background: white;
-        opacity: 0.2;
+        opacity: 0;
+        animation-name: introOuterCircle;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
       }
 
       .inner {
         background: white;
-        opacity: 0.8;
+        opacity: 0;
+        transform: scale(0.3);
+        animation-name: introInnerCircle;
+        animation-duration: 0.5s;
+        animation-delay: 0.8s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
         /* animation: animateCircle 4s ease-in-out alternate infinite; */
       }
 
       @keyframes animateCircle {
         from {
-          transform: scale(0.1);
+          transform: scale(0.3);
+          opacity: 0.8;
         }
         to {
+          opacity: 0.8;
           transform: scale(1);
+        }
+      }
+
+      @keyframes introInnerCircle {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes introOuterCircle {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 0.2;
         }
       }
     </style>

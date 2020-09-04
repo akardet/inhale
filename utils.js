@@ -1,4 +1,5 @@
 const STORED_OBJ_KEY = "inhaleObj";
+const INTERVAL_KEYS = ["inhale", "hold", "exhale"];
 
 function getFromStorage(key, fn) {
   chrome.storage.sync.get([key], function (result) {
